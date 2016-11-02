@@ -33,6 +33,7 @@ class PokemonsController < ApplicationController
       flash[:success] = "New pokemon has been added"
     else
       flash[:error] = pokemon.errors.full_message.to_sentence
-      redirect_to trainer_path(id: @pokemon.trainer)
+      redirect_to new_path
     end
-end
+  end
+end 
